@@ -11,7 +11,7 @@
         triggerText: 'Feedback geben', // Text des Triggers
         triggerId: 'umux-trigger', // ID des Triggers
         popupCloseText: 'Schließen', // Text für den Schließen-Button
-        cssUrl: 'umux-popup.css', // URL zur externen CSS-Datei
+        cssUrl: 'https://cdn.jsdelivr.net/gh/StabiBerlin/umux-popup/umux-popup.css', // URL zur externen CSS-Datei
       };
   
       // Konfiguration mit benutzerdefinierten Werten überschreiben
