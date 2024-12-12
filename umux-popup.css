@@ -1,0 +1,93 @@
+/* umux-popup.css */
+
+#umux-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  display: none;
+}
+
+#umux-popup {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: var(--popup-width, 600px);
+  height: var(--popup-height, 400px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#umux-popup iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: none;
+}
+
+#umux-popup-close {
+  text-align: right;
+  padding: 10px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
+}
+
+#umux-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  background: #007bff;
+  color: white;
+  height: 3em; /* Höhe des Buttons basierend auf Schriftgröße */
+  padding: 0 1em; /* Innenabstand für die Breite des Buttons */
+  border-radius: 1.5em 0 0 1.5em; /* Rundung basierend auf Höhe */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 1em; /* Schriftgröße, die Höhe bestimmt */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 1em; /* Anfangsbreite (nur Icon sichtbar) */
+  font-family: "Noto Sans", sans-serif;
+  transition: all 0.3s;
+}
+
+#umux-trigger:hover {
+  width: calc(
+    1em + 13em
+  ); /* Dynamische Breite: 1em (Icon) + 13em (Text und Abstand) */
+  background: #0056b3;
+}
+
+#umux-trigger .icon {
+  font-family: "Material Icons", sans-serif;
+  font-size: 1.5em;
+  margin-right: 0.5em; /* Abstand zwischen Icon und Text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#umux-trigger .text {
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  font-size: 1em;
+}
+
+#umux-trigger:hover .text {
+  opacity: 1;
+}
