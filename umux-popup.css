@@ -1,5 +1,4 @@
 /* umux-popup.css */
-
 #umux-popup-overlay {
   position: fixed;
   top: 0;
@@ -46,7 +45,7 @@
   position: fixed;
   bottom: 20px;
   right: 0;
-  background: #007bff;
+  background: #2f3e6a;
   color: white;
   height: 3em; /* Höhe des Buttons basierend auf Schriftgröße */
   padding: 0 1em; /* Innenabstand für die Breite des Buttons */
@@ -60,20 +59,20 @@
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  width: 1em; /* Anfangsbreite (nur Icon sichtbar) */
+  width: auto;
+  min-width: 3em; /* Anfangsbreite (nur Icon sichtbar) */
   font-family: "Noto Sans", sans-serif;
   transition: all 0.3s;
 }
 
 #umux-trigger:hover {
-  width: calc(
-    1em + 13em
-  ); /* Dynamische Breite: 1em (Icon) + 13em (Text und Abstand) */
-  background: #0056b3;
+  width: auto;
+  min-width: 8.5em;
+  background: #1e2743;
 }
 
 #umux-trigger .icon {
-  font-family: "Material Icons", sans-serif;
+  font-family: "Font Awesome 6 Pro", sans-serif;
   font-size: 1.5em;
   margin-right: 0.5em; /* Abstand zwischen Icon und Text */
   display: flex;
